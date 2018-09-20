@@ -21,11 +21,12 @@ a{
     margin: 0 auto;
     width: 1226px;
 }
-.container::before, .container::after{
+.container::before, .container::after,
+.clearfix::before,.clearfix::after{
     content:"";
     display:table;
 }
-.container::after{
+.container::after,.clearfix::after{
     clear: both;
 }
 .topbar a{
@@ -93,9 +94,19 @@ a{
 .header-logo{
     float:left;
     width: 62px;
-    height: 55px;
+    /* height: 55px; */
     margin-top: 22px;
     /* border: 1px solid black; */
+}
+.header-logo a{
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: #ff6700 url(../img/logo.png)no-repeat 50%;
+}
+.header-logo a.lr{
+    text-align: left;
+    text-indent: -992em;
 }
 .header-nav{
     float: left;
@@ -125,20 +136,20 @@ a{
     width: 296px;
     height: 50px;
     margin-top: 25px;
-    background: url(img/search.png);
+    
     
 }
 .search-text{
     width: 246px;
     height: 50px;
+    text-align: right;
 }
 .search-btn{
     width:50px;
     height: 50px;
      float: right;
-    background-image:url(img/search.png);
-    background: url(img/search.png);
-    background:#FFFFFF url("img/search.png");
+    background:url(../img/search.png) no-repeat 50%;
+    
     
      /* background-repeat:no-repeat; 
     background-size:100% 100%;
